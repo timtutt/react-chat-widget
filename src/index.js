@@ -15,6 +15,7 @@ const ConnectedWidget = props =>
       profileAvatar={props.profileAvatar}
       showCloseButton={props.showCloseButton}
       fullScreenMode={props.fullScreenMode}
+      openLauncherImg={props.openLauncherImg}
     />
   </Provider>;
 
@@ -25,7 +26,8 @@ ConnectedWidget.propTypes = {
   senderPlaceHolder: PropTypes.string,
   profileAvatar: PropTypes.string,
   showCloseButton: PropTypes.bool,
-  fullScreenMode: PropTypes.bool
+  fullScreenMode: PropTypes.bool,
+  openLauncherImg: PropTypes.string
 };
 
 ConnectedWidget.defaultProps = {

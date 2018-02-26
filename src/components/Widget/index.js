@@ -37,6 +37,7 @@ class Widget extends Component {
         profileAvatar={this.props.profileAvatar}
         showCloseButton={this.props.showCloseButton}
         fullScreenMode={this.props.fullScreenMode}
+        openLauncherImg={this.props.openLauncherImg}
       />
     );
   }
@@ -49,7 +50,8 @@ Widget.propTypes = {
   senderPlaceHolder: PropTypes.string,
   profileAvatar: PropTypes.string,
   showCloseButton: PropTypes.bool,
-  fullScreenMode: PropTypes.bool
+  fullScreenMode: PropTypes.bool,
+  openLauncherImg: PropTypes.string
 };
 
 export default connect()(Widget);
