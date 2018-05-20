@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Badge from './components/Badge';
 
 import openLauncher from 'assets/launcher_button.svg';
 import close from 'assets/clear-button.svg';
 import './style.scss';
 
-const Launcher = ({ toggle, chatOpened, openLauncherImg }) =>
+const Launcher = ({ toggle, chatOpened, badge, openLauncherImg}) =>
   <button type="button" className={chatOpened ? 'launcher hide-sm' : 'launcher'} onClick={toggle}>
+    <Badge badge ={badge} />
     {
       chatOpened ?
         <img src={close} className="close-launcher" alt="" /> :
@@ -18,6 +20,7 @@ const Launcher = ({ toggle, chatOpened, openLauncherImg }) =>
 Launcher.propTypes = {
   toggle: PropTypes.func,
   chatOpened: PropTypes.bool,
+  badge: PropTypes.number,
   openLauncherImg: PropTypes.string
 };
 

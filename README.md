@@ -32,6 +32,8 @@ yarn add react-chat-widget
 import React, { Component } from 'react';
 import { Widget } from 'react-chat-widget';
 
+import 'react-chat-widget/lib/styles.css';
+
 class App extends Component {
   render() {
     return (
@@ -50,6 +52,8 @@ export default App;
 ```js
 import React, { Component } from 'react';
 import { Widget } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
 
 class App extends Component {
   handleNewUserMessage = (newMessage) => {
@@ -76,6 +80,8 @@ export default App;
 ```js
 import React, { Component } from 'react';
 import { Widget, addResponseMessage } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
 
 class App extends Component {
   componentDidMount() {
@@ -107,6 +113,8 @@ export default App;
 ```js
 import React, { Component } from 'react';
 import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
 
 import logo from './logo.svg';
 
@@ -150,6 +158,8 @@ export default App;
 |**profileAvatar**|PropTypes.string|NO| |The profile image that will be set on the responses|
 |**showCloseButton**|PropTypes.bool|NO|false|Show or hide the close button in full screen mode|
 |**fullScreenMode**|PropTypes.bool|NO|false|Allow the use of full screen in full desktop mode|
+|**badge**|PropTypes.number|NO|0|Display a notification badge on the launcher if the value is greater than 0|
+|**autofocus**|PropTypes.bool|NO|true|Autofocus or not the user input|
 
 #### Styles
 

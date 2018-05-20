@@ -7,7 +7,11 @@ import Launcher from './components/Launcher';
 import './style.scss';
 
 const WidgetLayout = props =>
-  <div className={props.fullScreenMode ? 'widget-container full-screen' : 'widget-container'}>
+  <div
+    className={
+      `widget-container ${props.fullScreenMode ? 'full-screen' : ''} ${props.showChat ? 'opened' : ''}`
+    }
+  >
     {
       props.showChat &&
       <Conversation
@@ -20,12 +24,14 @@ const WidgetLayout = props =>
         showChat={props.showChat}
         showCloseButton={props.showCloseButton}
         disabledInput={props.disabledInput}
+        autofocus={props.autofocus}
       />
     }
     {
       !props.fullScreenMode &&
       <Launcher
         toggle={props.onToggleConversation}
+        badge={props.badge}
         openLauncherImg={props.openLauncherImg}
       />
     }
@@ -42,6 +48,8 @@ WidgetLayout.propTypes = {
   showCloseButton: PropTypes.bool,
   disabledInput: PropTypes.bool,
   fullScreenMode: PropTypes.bool,
+  badge: PropTypes.number,
+  autofocus: PropTypes.bool,
   openLauncherImg: PropTypes.string
 };
 
